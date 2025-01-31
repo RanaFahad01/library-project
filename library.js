@@ -6,18 +6,12 @@ const closeFormButton = document.querySelector("#closeDialog");
 
 let booksArray = [];
 
-function Book(name, author){
-    this.name = name;
-    this.author = author;
-    this.libIndex = booksArray.length;
-
-    // function readBook(){
-    //     const bookElement = document.querySelector(`.book[data-lib-index='${this.libIndex}']`);
-    //     if(bookElement){
-    //         booksArray.filter(book => book.libIndex !== this.libIndex);
-    //         bookElement.remove();
-    //     }
-    // }
+class Book {
+    constructor(name, author){
+        this.name = name;
+        this.author = author;
+        this.libIndex = booksArray.length;
+    }
 }
 
 function addBook(name, author){
